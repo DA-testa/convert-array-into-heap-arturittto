@@ -23,7 +23,7 @@ def main():
     text = input()
     if 'I' in text:
         text = int(input())
-        arr = list(map(int, text.split()))
+        arr = list(map(int, input().split()))
     elif 'F' in text:
         file = "tests/04"
         with open(file) as f:
