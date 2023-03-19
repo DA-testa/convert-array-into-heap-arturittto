@@ -19,10 +19,6 @@ def build_heap(arr):
         sift_down(arr, i, swaps)
     return swaps
 
-n = int(input())
-arr = list(map(int, input().split()))
-swaps = build_heap(arr)
-
 def main():
     text = input()
     if 'I' in text:
@@ -31,14 +27,12 @@ def main():
         file = "./test/5"
         with open(file) as f:
             text = f.read()
-    mismatch = find_mismatch(text)
-    if not mismatch:
-        print("Success")
-    else:
-        print(mismatch)
+    arr = list(map(int, text.split()))
+    swaps = build_heap(arr)
+
+    print(len(swaps))
+    for i, j in swaps:
+        print(i, j)
+
 if __name__ == "__main__":
     main()
-
-print(len(swaps))
-for i, j in swaps:
-    print(i, j)
