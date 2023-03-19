@@ -24,7 +24,7 @@ def main():
     if 'I' in text:
         text = input()
     elif 'F' in text:
-        file = "test/04"
+        file = "tests/04"
         with open(file) as f:
             text = f.read()
     arr = list(map(int, text.split()))
