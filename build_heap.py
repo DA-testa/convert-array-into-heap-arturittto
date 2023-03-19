@@ -1,3 +1,5 @@
+#Artūrs Čubukovs 16.grupa 221RDB127
+
 def sift_down(arr, i, swaps):
     n = len(arr)
     min_index = i
