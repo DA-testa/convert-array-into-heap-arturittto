@@ -28,7 +28,7 @@ def main():
         file = "tests/04"
         with open(file) as f:
             text = f.read()
-            arr = list(map(int, file.split()))
+            arr = list(map(int, file.readline().strip().split()))
     swaps = build_heap(arr)
 
     print(len(swaps))
