@@ -26,9 +26,12 @@ def main():
         arr = list(map(int, input().split()))
     elif 'F' in text:
         file = "tests/04"
-        with open(file) as f:
-            text = f.read()
-            arr = list(map(int, file.readline().strip().split()))
+        #with open(file) as f:
+            #text = f.read()
+            #arr = list(map(int, file.readline().strip().split()))
+        with open(f"tests/04", "r") as file:
+            text = int(file.readline().strip())
+            arr = list(map(int, file.readline().strip().split())) 
     swaps = build_heap(arr)
 
     print(len(swaps))
